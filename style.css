@@ -1,0 +1,58 @@
+.movimiento{
+  height: 318px;
+  width: 173px;
+  position: fixed;
+  left: 0;
+  animation: movitoys 8s linear;
+
+
+
+}
+
+
+
+
+
+.capguy-walk {
+  height: 318px;
+  width: 173px;
+  display: block;
+  margin-top: 250px;
+  /*position: absolute;
+  margin-top: 250px;
+  margin-left:550px;*/
+
+
+}
+
+.capguy-walk{
+  /*background: url("https://cdn.codeandweb.com/blog/2014/11/05/animate-sprites-in-css-with-texturepacker/capguy-walk.png");*/
+  background: url("img/capguy-walk.png");
+  padding: 5px;
+  animation-name: capguy-walk;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function:steps(8, end);
+  }
+
+@keyframes capguy-walk {
+  from{ background-position: 0 0}
+    to{background-position: -1472px 0}
+}
+
+@keyframes movitoys {
+  from {left: 0;}
+  to { left: 1000px;}
+}
+
+.background{
+background-size: auto;
+height: 100vh;
+width: 100vw;
+display: block;
+position: absolute;
+
+}
+body{
+  margin: 0;
+}
