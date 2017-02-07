@@ -1,58 +1,126 @@
-.movimiento{
-  height: 318px;
-  width: 173px;
-  position: fixed;
-  left: 0;
-  animation: movitoys 8s linear;
-
-
-
+.movimiento {
+    height: 318px;
+    width: 173px;
+    position: fixed;
+    left: 0;
+    animation: movitoys 8s linear;
+    animation-fill-mode: forwards;
 }
 
+.movimiento2 {
+    height: 300px;
+    width: 170px;
+    position: fixed;
+    left: 0;
+    animation: movibird 4s linear;
+    animation-fill-mode: forwards;
+}
 
-
+.movimiento3{
+  height: 300px;
+  width: 170px;
+  position: fixed;
+  left: 150px;
+  animation: movigirl  3s linear;
+  animation-fill-mode:forwards;
+}
 
 
 .capguy-walk {
-  height: 318px;
-  width: 173px;
-  display: block;
-  margin-top: 250px;
-  /*position: absolute;
-  margin-top: 250px;
-  margin-left:550px;*/
+    /*background: url("https://cdn.codeandweb.com/blog/2014/11/05/animate-sprites-in-css-with-texturepacker/capguy-walk.png");*/
+    height: 318px;
+    width: 173px;
+    display: block;
+    margin-top: 250px;
+    background: url("img/capguy-walk.png");
+    padding: 5px;
+    animation-name: capguy-walk;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(8, end);
+}
+
+.bird {
+    height: 123px;
+    display: block;
+    background: url("img/bird.png");
+    animation-name: aleteo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(3, end);
+}
+
+.girl{
+  width: 256px;
+  height: 256px;
+  display:block;
+  margin-top: 310px;
+  background: url("img/girl.png");
+  animation-name: run;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(6,end);
 
 
 }
 
-.capguy-walk{
-  /*background: url("https://cdn.codeandweb.com/blog/2014/11/05/animate-sprites-in-css-with-texturepacker/capguy-walk.png");*/
-  background: url("img/capguy-walk.png");
-  padding: 5px;
-  animation-name: capguy-walk;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function:steps(8, end);
-  }
-
 @keyframes capguy-walk {
-  from{ background-position: 0 0}
-    to{background-position: -1472px 0}
+    from {
+        background-position: 0 0
+    }
+    to {
+        background-position: -1472px 0
+    }
 }
 
 @keyframes movitoys {
-  from {left: 0;}
-  to { left: 1000px;}
+    from {
+        left: 0;
+    }
+    to {
+        left: 1300px;
+    }
 }
 
-.background{
-background-size: auto;
-height: 100vh;
-width: 100vw;
-display: block;
-position: absolute;
+@keyframes aleteo {
+    from {
+        background-position: 0 0
+    }
+    to {
+        background-position: 540px 0
+    }
+}
+
+@keyframes movibird {
+    from {
+        left: 0;
+    }
+    to {
+        left: 1300px;
+    }
+}
+
+
+@keyframes run {
+  from{ background-position: 0 0}
+  to {background-position: 1536px;}
+}
+
+@keyframes movigirl {
+  from{ left: 150px;}
+  to{left: 1300px;}
 
 }
-body{
-  margin: 0;
+
+
+.background {
+    background-size: auto;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    position: absolute;
+}
+
+body {
+    margin: 0;
 }
